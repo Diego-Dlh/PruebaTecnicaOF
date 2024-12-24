@@ -7,8 +7,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 
 class Voto_Personeria : AppCompatActivity() {
+
+    var conkinder1: Int = 0
+    var con0a1: Int = 0
     var con1a1: Int = 0
     var con2a1: Int = 0
     var con3a1: Int = 0
@@ -20,6 +24,7 @@ class Voto_Personeria : AppCompatActivity() {
     var con9a1: Int = 0
     var con10a1: Int = 0
     var con11a1: Int = 0
+    var con0b1: Int = 0
     var con1b1: Int = 0
     var con2b1: Int = 0
     var con3b1: Int = 0
@@ -32,7 +37,10 @@ class Voto_Personeria : AppCompatActivity() {
     var con9b1: Int = 0
     var con10b1: Int = 0
     var con11b1: Int = 0
+    var con6c1: Int = 0
 
+    var conkinder2: Int = 0
+    var con0a2: Int = 0
     var con1a2: Int = 0
     var con2a2: Int = 0
     var con3a2: Int = 0
@@ -44,6 +52,7 @@ class Voto_Personeria : AppCompatActivity() {
     var con9a2: Int = 0
     var con10a2: Int = 0
     var con11a2: Int = 0
+    var con0b2: Int = 0
     var con1b2: Int = 0
     var con2b2: Int = 0
     var con3b2: Int = 0
@@ -56,7 +65,10 @@ class Voto_Personeria : AppCompatActivity() {
     var con9b2: Int = 0
     var con10b2: Int = 0
     var con11b2: Int = 0
+    var con6c2: Int = 0
 
+    var conkinder3: Int = 0
+    var con0a3: Int = 0
     var con1a3: Int = 0
     var con2a3: Int = 0
     var con3a3: Int = 0
@@ -68,6 +80,7 @@ class Voto_Personeria : AppCompatActivity() {
     var con9a3: Int = 0
     var con10a3: Int = 0
     var con11a3: Int = 0
+    var con0b3: Int = 0
     var con1b3: Int = 0
     var con2b3: Int = 0
     var con3b3: Int = 0
@@ -80,6 +93,7 @@ class Voto_Personeria : AppCompatActivity() {
     var con9b3: Int = 0
     var con10b3: Int = 0
     var con11b3: Int = 0
+    var con6c3: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,6 +104,8 @@ class Voto_Personeria : AppCompatActivity() {
         val shared = getSharedPreferences("contador", Context.MODE_PRIVATE)
         val editor = shared.edit()
 
+        conkinder1 = shared.getInt("conkinder1", 0)
+        con0a1 = shared.getInt("con0a1", 0)  //con0a1
         con1a1 = shared.getInt("con1a1", 0)
         con2a1 = shared.getInt("con2a1", 0)
         con3a1 = shared.getInt("con3a1", 0)
@@ -101,6 +117,7 @@ class Voto_Personeria : AppCompatActivity() {
         con9a1 = shared.getInt("con9a1", 0)
         con10a1 = shared.getInt("con10a1", 0)
         con11a1 = shared.getInt("con11a1", 0)
+        con0b1 = shared.getInt("con0b1", 0) //con0b1
         con1b1 = shared.getInt("con1b1", 0)
         con2b1 = shared.getInt("con2b1", 0)
         con3b1 = shared.getInt("con3b1", 0)
@@ -113,7 +130,10 @@ class Voto_Personeria : AppCompatActivity() {
         con9b1 = shared.getInt("con9b1", 0)
         con10b1 = shared.getInt("con10b1", 0)
         con11b1 = shared.getInt("con11b1", 0)
+        con6c1 = shared.getInt("con6c1", 0)
 
+        conkinder2 = shared.getInt("conkinder2", 0)
+        con0a2 = shared.getInt("con0a2",0) //con0a2
         con1a2 = shared.getInt("con1a2", 0)
         con2a2 = shared.getInt("con2a2", 0)
         con3a2 = shared.getInt("con3a2", 0)
@@ -125,6 +145,7 @@ class Voto_Personeria : AppCompatActivity() {
         con9a2 = shared.getInt("con9a2", 0)
         con10a2 = shared.getInt("con10a2", 0)
         con11a2 = shared.getInt("con11a2", 0)
+        con0b2 = shared.getInt("con0b2",0) //con0b2
         con1b2 = shared.getInt("con1b2", 0)
         con2b2 = shared.getInt("con2b2", 0)
         con3b2 = shared.getInt("con3b2", 0)
@@ -137,7 +158,10 @@ class Voto_Personeria : AppCompatActivity() {
         con9b2 = shared.getInt("con9b2", 0)
         con10b2 = shared.getInt("con10b2", 0)
         con11b2 = shared.getInt("con11b2", 0)
+        con6c2 = shared.getInt("con6c2", 0)
 
+        conkinder3 = shared.getInt("conkinder3", 0)
+        con0a3 = shared.getInt("con0a3", 0) //con0a3
         con1a3 = shared.getInt("con1a3", 0)
         con2a3 = shared.getInt("con2a3", 0)
         con3a3 = shared.getInt("con3a3", 0)
@@ -149,6 +173,7 @@ class Voto_Personeria : AppCompatActivity() {
         con9a3 = shared.getInt("con9a3", 0)
         con10a3 = shared.getInt("con10a3", 0)
         con11a3 = shared.getInt("con11a3", 0)
+        con0b3 = shared.getInt("con0b3",0) //con0b3
         con1b3 = shared.getInt("con1b3", 0)
         con2b3 = shared.getInt("con2b3", 0)
         con3b3 = shared.getInt("con3b3", 0)
@@ -161,6 +186,7 @@ class Voto_Personeria : AppCompatActivity() {
         con9b3 = shared.getInt("con9b3", 0)
         con10b3 = shared.getInt("con10b3", 0)
         con11b3 = shared.getInt("con11b3", 0)
+        con6c3 = shared.getInt("con6c3", 0)
 
         // Inicializar variables
         var boton: Button? = null
@@ -183,6 +209,11 @@ class Voto_Personeria : AppCompatActivity() {
         boton!!.setOnClickListener {
             navegarAVotoContraloria()
             when (grado) {
+                "a0" -> {
+                    con0a1++
+                    editor.putInt("con0a1", con0a1)
+                    editor.apply()
+                }
                 "a1" -> {
                     con1a1++
                     editor.putInt("con1a1", con1a1)
@@ -238,6 +269,11 @@ class Voto_Personeria : AppCompatActivity() {
                     editor.putInt("con11a1", con11a1)
                     editor.apply()
                 }
+                "b0" -> {
+                    con0b1++
+                    editor.putInt("con0b1", con0b1)
+                    editor.apply()
+                }
                 "b1" -> {
                     con1b1++
                     editor.putInt("con1b1", con1b1)
@@ -265,7 +301,7 @@ class Voto_Personeria : AppCompatActivity() {
                 }
                 "b6" -> {
                     con6b1++
-                    editor.putInt("con6a1", con6b1)
+                    editor.putInt("con6b1", con6b1)
                     editor.apply()
                 }
                 "b7" -> {
@@ -298,11 +334,27 @@ class Voto_Personeria : AppCompatActivity() {
                     editor.putInt("con11b1", con11b1)
                     editor.apply()
                 }
+                "kinder" -> {
+                    conkinder1++
+                    editor.putInt("conkinder1", conkinder1)
+                    editor.apply()
+                }
+                "c6" -> {
+                con6c1++
+                editor.putInt("con6c1", con6c1)
+                editor.apply()
+                }
+
             }
         }
         boton2!!.setOnClickListener {
             navegarAVotoContraloria()
             when (grado) {
+                "a0" -> {
+                    con0a2++
+                    editor.putInt("con0a2", con0a2)
+                    editor.apply()
+                }
                 "a1" -> {
                     con1a2++
                     editor.putInt("con1a2", con1a2)
@@ -369,6 +421,12 @@ class Voto_Personeria : AppCompatActivity() {
                     editor.apply()
                 }
 
+                "b0" -> {
+                    con0b2++
+                    editor.putInt("con0b2", con0b2)
+                    editor.apply()
+                }
+
                 "b1" -> {
                     con1b2++
                     editor.putInt("con1b2", con1b2)
@@ -401,7 +459,7 @@ class Voto_Personeria : AppCompatActivity() {
 
                 "b6" -> {
                     con6b2++
-                    editor.putInt("con6a2", con6b2)
+                    editor.putInt("con6b2", con6b2)
                     editor.apply()
                 }
 
@@ -440,6 +498,16 @@ class Voto_Personeria : AppCompatActivity() {
                     editor.putInt("con11b2", con11b2)
                     editor.apply()
                 }
+                "kinder" -> {
+                    conkinder2++
+                    editor.putInt("conkinder2", conkinder2)
+                    editor.apply()
+                }
+                "c6" -> {
+                con6c2++
+                editor.putInt("con6c2", con6c2)
+                editor.apply()
+            }
             }
 
         }
@@ -449,6 +517,11 @@ class Voto_Personeria : AppCompatActivity() {
 
             navegarAVotoContraloria()
             when (grado) {
+                "a0" -> {
+                    con0a3++
+                    editor.putInt("con0a3", con0a3)
+                    editor.apply()
+                }
                 "a1" -> {
                     con1a3++
                     editor.putInt("con1a3", con1a3)
@@ -481,7 +554,7 @@ class Voto_Personeria : AppCompatActivity() {
 
                 "a6" -> {
                     con6a3++
-                    editor.putInt("con6a1", con6a3)
+                    editor.putInt("con6a3", con6a3)
                     editor.apply()
                 }
 
@@ -515,6 +588,11 @@ class Voto_Personeria : AppCompatActivity() {
                     editor.apply()
                 }
 
+                "b0" -> {
+                    con0b3++
+                    editor.putInt("con0b3", con0b3)
+                    editor.apply()
+                }
                 "b1" -> {
                     con1b3++
                     editor.putInt("con1b3", con1b3)
@@ -529,7 +607,7 @@ class Voto_Personeria : AppCompatActivity() {
 
                 "b3" -> {
                     con3b3++
-                    editor.putInt("con3b1", con3b3)
+                    editor.putInt("con3b3", con3b3)
                     editor.apply()
                 }
 
@@ -547,7 +625,7 @@ class Voto_Personeria : AppCompatActivity() {
 
                 "b6" -> {
                     con6b3++
-                    editor.putInt("con6a3", con6b3)
+                    editor.putInt("con6b3", con6b3)
                     editor.apply()
                 }
 
@@ -586,6 +664,16 @@ class Voto_Personeria : AppCompatActivity() {
                     editor.putInt("con11b3", con11b3)
                     editor.apply()
                 }
+                "kinder" -> {
+                    conkinder3++
+                    editor.putInt("conkinder3", conkinder3)
+                    editor.apply()
+                }
+                "c6" -> {
+                    con6c3++
+                editor.putInt("con6c3", con6c3)
+                editor.apply()
+            }
             }
         }
 

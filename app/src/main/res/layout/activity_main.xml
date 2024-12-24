@@ -7,6 +7,37 @@
     android:background="@drawable/fonfopantalla"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/Texele"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ELECCIONES ESTUDIANTILES 2024"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREADO POR:\nDIEGO ANDRES DE LA HOZ BALLENA\ndiegodelahozb@hotmail.com"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="481dp"
@@ -20,14 +51,16 @@
         app:srcCompat="@drawable/cropped_ielamaria_small" />
 
     <Button
-        android:id="@+id/Bempeza"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="393dp"
+        android:id="@+id/BContiElec1"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="429dp"
+        android:layout_marginTop="350dp"
         android:backgroundTint="#ADF067"
-        android:text="Empezar\nElecciones"
-        android:textSize="14sp"
+        android:text="Continuar\nElecciones"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,14 +70,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/BContiElec1"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="429dp"
-        android:layout_marginTop="393dp"
+        android:id="@+id/Bempeza"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="350dp"
         android:backgroundTint="#ADF067"
-        android:text="Continuar\nElecciones"
-        android:textSize="14sp"
+        android:text="Empezar\nElecciones"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,13 +90,15 @@
 
     <Button
         android:id="@+id/Badministrado"
-        android:layout_width="155dp"
-        android:layout_height="55dp"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:layout_marginStart="730dp"
-        android:layout_marginTop="393dp"
+        android:layout_marginTop="350dp"
         android:backgroundTint="#ADF067"
         android:text="Administrador"
-        android:textSize="14sp"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        android:textStyle="bold"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

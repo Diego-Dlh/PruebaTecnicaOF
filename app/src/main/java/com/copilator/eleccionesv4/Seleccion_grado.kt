@@ -1,5 +1,6 @@
 package com.copilator.eleccionesv4
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -13,61 +14,42 @@ class Seleccion_grado : AppCompatActivity() {
 
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seleccion_grado)
 
-        b1 = findViewById(R.id.G1b)
-        b2 = findViewById(R.id.G2b)
-        b3 = findViewById(R.id.G3b)
-        b4 = findViewById(R.id.G4b)
-        b5 = findViewById(R.id.G5b)
-        b6 = findViewById(R.id.G6b)
-        b7 = findViewById(R.id.G7b)
-        b8 = findViewById(R.id.G8b)
-        b9 = findViewById(R.id.G9b)
-        b10 = findViewById(R.id.G10b)
-        b11 = findViewById(R.id.G11b)
-        a1 = findViewById(R.id.G1a)
-        a2 = findViewById(R.id.G2a)
-        a3 = findViewById(R.id.G3a)
-        a4 = findViewById(R.id.G4a)
-        a5 = findViewById(R.id.G5a)
-        a6 = findViewById(R.id.G6a)
-        a7 = findViewById(R.id.G7a)
-        a8 = findViewById(R.id.G8a)
-        a9 = findViewById(R.id.G9a)
-        a10 = findViewById(R.id.G10a)
-        a11 = findViewById(R.id.G11a)
-        c7 = findViewById(R.id.G7c)
+        N0G = findViewById(R.id.N0)
+        N1G = findViewById(R.id.N1)
+        N2G = findViewById(R.id.N2)
+        N3G = findViewById(R.id.N3)
+        N4G = findViewById(R.id.N4)
+        N5G = findViewById(R.id.N5)
+        N6G = findViewById(R.id.N6)
+        N7G = findViewById(R.id.N7)
+        N8G = findViewById(R.id.N8)
+        N9G = findViewById(R.id.N9)
+        N10G = findViewById(R.id.N10)
+        N11G = findViewById(R.id.N11)
+        kinder = findViewById(R.id.kind)
 
 
 
 
-        a1?.setOnClickListener { onClickGrado("a1") }
-        a2?.setOnClickListener { onClickGrado("a2") }
-        a3?.setOnClickListener { onClickGrado("a3") }
-        a4?.setOnClickListener { onClickGrado("a4") }
-        a5?.setOnClickListener { onClickGrado("a5") }
-        a6?.setOnClickListener { onClickGrado("a6") }
-        a7?.setOnClickListener { onClickGrado("a7") }
-        a8?.setOnClickListener { onClickGrado("a8") }
-        a9?.setOnClickListener { onClickGrado("a9") }
-        a10?.setOnClickListener { onClickGrado("a10") }
-        a11?.setOnClickListener { onClickGrado("a11") }
+        N0G?.setOnClickListener { onClickGrado("0") }
+        N1G?.setOnClickListener { onClickGrado("1") }
+        N2G?.setOnClickListener { onClickGrado("2") }
+        N3G?.setOnClickListener { onClickGrado("3") }
+        N4G?.setOnClickListener { onClickGrado("4") }
+        N5G?.setOnClickListener { onClickGrado("5") }
+        N6G?.setOnClickListener { onClickGrado("6") }
+        N7G?.setOnClickListener { onClickGrado("7") }
+        N8G?.setOnClickListener { onClickGrado("8") }
+        N9G?.setOnClickListener { onClickGrado("9") }
+        N10G?.setOnClickListener { onClickGrado("10")}
+        N11G?.setOnClickListener { onClickGrado("11")}
+        kinder?.setOnClickListener {onClickGradoK("kinder")  }
 
-        b1?.setOnClickListener { onClickGrado("b1") }
-        b2?.setOnClickListener { onClickGrado("b2") }
-        b3?.setOnClickListener { onClickGrado("b3") }
-        b4?.setOnClickListener { onClickGrado("b4") }
-        b5?.setOnClickListener { onClickGrado("b5") }
-        b6?.setOnClickListener { onClickGrado("b6") }
-        b7?.setOnClickListener { onClickGrado("b7") }
-        c7?.setOnClickListener { onClickGrado("b7") }
-        b8?.setOnClickListener { onClickGrado("b8") }
-        b9?.setOnClickListener { onClickGrado("b9") }
-        b10?.setOnClickListener { onClickGrado("b10") }
-        b11?.setOnClickListener { onClickGrado("b11") }
 
         botonMod = findViewById(R.id.Moderador)
 
@@ -76,43 +58,46 @@ class Seleccion_grado : AppCompatActivity() {
         }
 
     }
-    var a1: Button? = null
-    var a2: Button? = null
-    var a3: Button? = null
-    var a4: Button? = null
-    var a5: Button? = null
-    var a6: Button? = null
-    var a7: Button? = null
-    var a8: Button? = null
-    var a9: Button? = null
-    var a10: Button? = null
-    var a11: Button? = null
 
-    var b1: Button? = null
-    var b2: Button? = null
-    var b3: Button? = null
-    var b4: Button? = null
-    var b5: Button? = null
-    var b6: Button? = null
-    var b7: Button? = null
-    var b8: Button? = null
-    var b9: Button? = null
-    var b10: Button? = null
-    var b11: Button? = null
-    var c7: Button? = null
-    var SelecGrado: String = " "
+    var N0G: Button? = null
+    var N1G: Button? = null
+    var N2G: Button? = null
+    var N3G: Button? = null
+    var N4G: Button? = null
+    var N5G: Button? = null
+    var N6G: Button? = null
+    var N7G: Button? = null
+    var N8G: Button? = null
+    var N9G: Button? = null
+    var N10G: Button? = null
+    var N11G: Button? = null
+    var kinder: Button? = null
+
     var botonMod: ImageButton? = null
 
 
 
     fun onClickGrado(grado: String) {
+        val toast = Toast.makeText(this, grado, Toast.LENGTH_SHORT)
+        toast.show()
+        val sharedPreferences = getSharedPreferences("Grados", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("Variables_grado_numero", grado)
+        editor.apply()
+        val intent = Intent(this, Seleccion_grado_letra::class.java)
+        startActivity(intent)
+
+    }
+
+    fun onClickGradoK(grado: String) {
+        val toast = Toast.makeText(this, grado, Toast.LENGTH_SHORT)
+        toast.show()
         val sharedPreferences = getSharedPreferences("Grados", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("Variables_grado", grado)
         editor.apply()
         val intent = Intent(this, Voto_Personeria::class.java)
         startActivity(intent)
-
 
     }
 
